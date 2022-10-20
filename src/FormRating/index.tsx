@@ -1,4 +1,4 @@
-import type { RatingProps } from '@mui/material';
+import type { RatingProps } from '@mui/material/Rating';
 import Rating from '@mui/material/Rating';
 import type {
   FieldPath,

@@ -1,4 +1,4 @@
-import type { TextFieldProps } from '@mui/material';
+import type { TextFieldProps } from '@mui/material/TextField';
 import TextField from '@mui/material/TextField';
 import type {
   FieldPath,
