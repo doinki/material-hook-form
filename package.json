@@ -5,7 +5,9 @@
   "sideEffects": false,
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "build:storybook": "build-storybook",
+    "storybook": "start-storybook -p 6006"
   },
   "peerDependencies": {
     "@mui/material": "^5.0.0",
@@ -14,10 +16,22 @@
     "react-hook-form": "^7.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.6",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
+    "@mdx-js/react": "^1.6.22",
     "@mui/material": "^5.10.10",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-docs": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack4": "^6.5.12",
+    "@storybook/manager-webpack4": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.21",
+    "babel-loader": "^8.2.5",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
