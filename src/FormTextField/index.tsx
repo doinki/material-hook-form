@@ -1,11 +1,11 @@
 import type { TextFieldProps } from '@mui/material';
 import TextField from '@mui/material/TextField';
-import {
+import type {
   FieldPath,
   FieldValues,
-  useController,
   UseControllerProps,
 } from 'react-hook-form';
+import { useController } from 'react-hook-form';
 
 export type FormTextFieldProps<
   TFieldValues extends FieldValues,
