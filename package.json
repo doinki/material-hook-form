@@ -1,0 +1,23 @@
+{
+  "main": "lib/index.js",
+  "name": "material-hook-form",
+  "packageManager": "yarn@3.2.4",
+  "sideEffects": false,
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-hook-form": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.21",
+    "prettier": "^2.7.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.38.0",
+    "typescript": "^4.8.4"
+  }
+}
