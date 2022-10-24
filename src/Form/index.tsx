@@ -2,7 +2,7 @@ import type { BoxProps } from '@mui/material/Box';
 import Box from '@mui/material/Box';
 import type { FC, FormEventHandler, KeyboardEventHandler } from 'react';
 
-export interface FormProps extends Omit<BoxProps<'form'>, 'component'> {
+export interface FormProps extends BoxProps<'form'> {
   /**
    * @default true
    */
@@ -10,7 +10,13 @@ export interface FormProps extends Omit<BoxProps<'form'>, 'component'> {
 }
 
 const Form: FC<FormProps> = (props) => {
-  const { onKeyDown, onSubmit, preventEnterSubmit = true, ...rest } = props;
+  const {
+    component = 'form',
+    onKeyDown,
+    onSubmit,
+    preventEnterSubmit = true,
+    ...rest
+  } = props;
 
   const handleKeyDown: KeyboardEventHandler<HTMLFormElement> = (e) => {
     if (preventEnterSubmit && e.key === 'Enter') {
@@ -29,7 +35,7 @@ const Form: FC<FormProps> = (props) => {
   return (
     <Box
       {...rest}
-      component="form"
+      component={component}
       onKeyDown={handleKeyDown}
       onSubmit={handleSubmit}
     />
