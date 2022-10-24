@@ -25,7 +25,9 @@ const FormRating = <
   const { name, control, defaultValue, rules, shouldUnregister, ...rest } =
     props;
 
-  const { field } = useController({
+  const {
+    field: { onChange: handleChange, ...field },
+  } = useController({
     name,
     control,
     defaultValue,
@@ -33,7 +35,15 @@ const FormRating = <
     shouldUnregister,
   });
 
-  return <Rating {...rest} {...field} />;
+  return (
+    <Rating
+      {...rest}
+      {...field}
+      onChange={(_, newValue) => {
+        handleChange(newValue);
+      }}
+    />
+  );
 };
 
 export default FormRating;
