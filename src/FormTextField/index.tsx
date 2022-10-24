@@ -22,7 +22,7 @@ const FormTextField = <
 >(
   props: FormTextFieldProps<TFieldValues, TName>
 ) => {
-  const { control, name, defaultValue, shouldUnregister, rules, ...rest } =
+  const { control, defaultValue, name, rules, shouldUnregister, ...rest } =
     props;
 
   const {
@@ -30,10 +30,10 @@ const FormTextField = <
     fieldState: { error },
   } = useController({
     control,
-    name,
     defaultValue,
-    shouldUnregister,
+    name,
     rules,
+    shouldUnregister,
   });
 
   return <TextField {...rest} {...field} error={!!error} />;

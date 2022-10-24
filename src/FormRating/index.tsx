@@ -22,15 +22,15 @@ const FormRating = <
 >(
   props: FormRatingProps<TFieldValues, TName>
 ) => {
-  const { name, control, defaultValue, rules, shouldUnregister, ...rest } =
+  const { control, defaultValue, name, rules, shouldUnregister, ...rest } =
     props;
 
   const {
     field: { onChange: handleChange, ...field },
   } = useController({
-    name,
     control,
     defaultValue,
+    name,
     rules,
     shouldUnregister,
   });

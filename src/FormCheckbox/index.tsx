@@ -28,15 +28,15 @@ const FormCheckbox = <
 >(
   props: FormCheckboxProps<TFieldValues, TName>
 ) => {
-  const { name, control, defaultValue, rules, shouldUnregister, ...rest } =
+  const { control, defaultValue, name, rules, shouldUnregister, ...rest } =
     props;
 
   const {
     field: { value, ...field },
   } = useController({
     control,
-    name,
     defaultValue,
+    name,
     rules,
     shouldUnregister,
   });
