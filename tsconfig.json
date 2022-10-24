@@ -5,7 +5,7 @@
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
     "lib": ["DOM", "ESNext"],
-    "module": "NodeNext",
+    "module": "ESNext",
     "moduleResolution": "Node",
     "outDir": "lib",
     "skipLibCheck": true,
