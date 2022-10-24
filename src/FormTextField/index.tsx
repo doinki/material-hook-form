@@ -36,7 +36,14 @@ const FormTextField = <
     shouldUnregister,
   });
 
-  return <TextField {...rest} {...field} error={!!error} />;
+  return (
+    <TextField
+      helperText={error?.message}
+      {...rest}
+      {...field}
+      error={!!error}
+    />
+  );
 };
 
 export default FormTextField;

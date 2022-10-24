@@ -13,3 +13,9 @@ const Template: ComponentStory<typeof FormTextField> = (args) => {
 
 export const Basic = Template.bind({});
 Basic.args = { defaultValue: '' };
+
+export const HelperText = Template.bind({});
+HelperText.args = {
+  defaultValue: '',
+  helperText: 'Weight',
+};
