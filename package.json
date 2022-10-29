@@ -1,23 +1,81 @@
 {
-  "main": "lib/index.js",
+  "author": {
+    "email": "doinki94@gmail.com",
+    "name": "doinki",
+    "url": "https://github.com/doinki"
+  },
+  "bugs": "https://github.com/doinki/material-hook-form/issues",
+  "description": "MUI and React Hook Form",
+  "files": [
+    "lib"
+  ],
+  "homepage": "https://github.com/doinki/material-hook-form#readme",
+  "keywords": [
+    "react",
+    "mui",
+    "material-ui",
+    "react-hook-form"
+  ],
+  "license": "MIT",
+  "main": "lib/cjs/index.js",
+  "module": "lib/index.js",
   "name": "material-hook-form",
   "packageManager": "yarn@3.2.4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doinki/material-hook-form.git"
+  },
   "sideEffects": false,
   "types": "lib/index.d.ts",
+  "version": "1.0.0",
   "scripts": {
-    "build": "tsc"
+    "build": "rimraf lib && yarn build:rollup && yarn build:tsc",
+    "build:rollup": "rollup -c",
+    "build:storybook": "build-storybook",
+    "build:tsc": "tsc -p tsconfig.esm.json",
+    "storybook": "start-storybook -p 6006"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.0.0",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0",
     "react-hook-form": "^7.0.0"
   },
+  "dependencies": {
+    "@babel/runtime": "^7.20.0"
+  },
   "devDependencies": {
-    "@types/react": "^18.0.21",
+    "@babel/core": "^7.19.6",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@emotion/babel-plugin": "^11.10.5",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.11",
+    "@rollup/plugin-babel": "^6.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack5": "^6.5.13",
+    "@storybook/manager-webpack5": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@types/react": "^18.0.24",
+    "@typescript-eslint/eslint-plugin": "^5.41.0",
+    "@typescript-eslint/parser": "^5.41.0",
+    "eslint": "^8.26.0",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.6",
     "prettier": "^2.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.38.0",
+    "require-from-string": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.2.3",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.8.4"
   }
 }
