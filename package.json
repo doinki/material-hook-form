@@ -27,7 +27,7 @@
   },
   "sideEffects": false,
   "types": "lib/index.d.ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "rimraf lib && yarn build:rollup && yarn build:tsc",
     "build:rollup": "rollup -c",

@@ -16,6 +16,9 @@ export type FormSelectProps<
 > &
   UseControllerProps<TFieldValues, TName>;
 
+/**
+ * @see [React Select component](https://mui.com/material-ui/react-select/)
+ */
 const FormSelect = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>

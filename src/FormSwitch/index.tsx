@@ -22,6 +22,9 @@ export type FormSwitchProps<
 > &
   UseControllerProps<TFieldValues, TName>;
 
+/**
+ * @see [React Switch component](https://mui.com/material-ui/react-switch/)
+ */
 const FormSwitch = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
