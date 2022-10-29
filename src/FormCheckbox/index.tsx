@@ -22,6 +22,9 @@ export type FormCheckboxProps<
 > &
   UseControllerProps<TFieldValues, TName>;
 
+/**
+ * @see [React Checkbox component](https://mui.com/material-ui/react-checkbox/)
+ */
 const FormCheckbox = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>

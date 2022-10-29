@@ -16,6 +16,9 @@ export type FormSliderProps<
 > &
   UseControllerProps<TFieldValues, TName>;
 
+/**
+ * @see [React Slider component](https://mui.com/material-ui/react-slider/)
+ */
 const FormSlider = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>

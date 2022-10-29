@@ -16,6 +16,9 @@ export type FormRatingProps<
 > &
   UseControllerProps<TFieldValues, TName>;
 
+/**
+ * @see [React Rating component](https://mui.com/material-ui/react-rating/)
+ */
 const FormRating = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>

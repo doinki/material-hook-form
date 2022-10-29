@@ -19,7 +19,7 @@ export interface FormProps extends BoxProps<'form'> {
 }
 
 /**
- * @see [React Box](https://mui.com/material-ui/react-box/#main-content)
+ * @see [React Box component](https://mui.com/material-ui/react-box/)
  */
 const Form: FC<FormProps> = (props) => {
   const {
