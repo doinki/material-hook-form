@@ -7,6 +7,9 @@
   ],
   "parser": "@typescript-eslint/parser",
   "rules": {
+    "react/jsx-boolean-value": "warn",
+    "react/jsx-curly-brace-presence": "warn",
+    "react/jsx-no-useless-fragment": "warn",
     "react/jsx-sort-props": [
       "warn",
       { "callbacksLast": true, "reservedFirst": true, "shorthandLast": true }
