@@ -2,6 +2,8 @@ export { default as Form } from './Form';
 export * from './Form';
 export { default as FormCheckbox } from './FormCheckbox';
 export * from './FormCheckbox';
+export { default as FormControlLabel } from './FormControlLabel';
+export * from './FormControlLabel';
 export { default as FormRating } from './FormRating';
 export * from './FormRating';
 export { default as FormSelect } from './FormSelect';

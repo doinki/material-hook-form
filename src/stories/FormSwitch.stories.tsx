@@ -1,6 +1,7 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import FormSwitch from '../FormSwitch';
+import { Switch } from './FormControlLabel.stories';
 
 export default {
   component: FormSwitch,
@@ -13,3 +14,5 @@ const Template: ComponentStory<typeof FormSwitch> = (args) => {
 
 export const Basic = Template.bind({});
 Basic.args = { defaultValue: true };
+
+export const Label = Switch;
