@@ -25,6 +25,9 @@ export interface FormControlLabelProps<
   children: MuiFormControlLabelProps['control'];
 }
 
+/**
+ * @see [FormControlLabel API](https://mui.com/material-ui/api/form-control-label/)
+ */
 const FormControlLabel = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
