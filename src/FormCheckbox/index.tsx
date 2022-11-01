@@ -16,6 +16,7 @@ export type FormCheckboxProps<
   | 'defaultChecked'
   | 'defaultValue'
   | 'name'
+  | 'ref'
   | 'value'
   | 'onBlur'
   | 'onChange'

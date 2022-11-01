@@ -12,7 +12,7 @@ export interface FormToggleButtonGroupProps<
   TName extends FieldPath<TFieldValues>
 > extends Omit<
       ToggleButtonGroupProps,
-      'defaultValue' | 'value' | 'onBlur' | 'onChange'
+      'defaultValue' | 'ref' | 'value' | 'onBlur' | 'onChange'
     >,
     UseControllerProps<TFieldValues, TName> {
   /**

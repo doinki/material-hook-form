@@ -17,6 +17,7 @@ export interface FormControlLabelProps<
       | 'defaultChecked'
       | 'defaultValue'
       | 'name'
+      | 'ref'
       | 'value'
       | 'onBlur'
       | 'onChange'

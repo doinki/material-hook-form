@@ -16,6 +16,7 @@ export type FormSwitchProps<
   | 'defaultChecked'
   | 'defaultValue'
   | 'name'
+  | 'ref'
   | 'value'
   | 'onBlur'
   | 'onChange'
