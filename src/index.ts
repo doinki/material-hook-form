@@ -14,3 +14,5 @@ export { default as FormSwitch } from './FormSwitch';
 export * from './FormSwitch';
 export { default as FormTextField } from './FormTextField';
 export * from './FormTextField';
+export { default as FormToggleButtonGroup } from './FormToggleButtonGroup';
+export * from './FormToggleButtonGroup';
