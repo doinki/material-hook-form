@@ -33,3 +33,24 @@ Basic.args = {
     console.log('onSubmit');
   },
 };
+
+export const DisableEnterSubmit = Template.bind({});
+DisableEnterSubmit.args = {
+  children: (
+    <>
+      <FormTextField defaultValue="" name="a" type="text" />
+      <FormTextField defaultValue="" name="b" type="text" />
+      <Button type="submit" variant="outlined">
+        Submit
+      </Button>
+    </>
+  ),
+  component: (props) => (
+    <Stack {...props} component="form" direction="row" gap={2} />
+  ),
+  disableEnterSubmit: true,
+  onSubmit: (e) => {
+    e.preventDefault();
+    console.log('onSubmit');
+  },
+};
