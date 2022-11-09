@@ -52,6 +52,7 @@
     "@emotion/babel-plugin": "^11.10.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.11",
     "@rollup/plugin-babel": "^6.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",

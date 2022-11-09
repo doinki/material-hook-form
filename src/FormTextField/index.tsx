@@ -12,7 +12,7 @@ export type FormTextFieldProps<
   TName extends FieldPath<TFieldValues>
 > = Omit<
   TextFieldProps,
-  'defaultValue' | 'error' | 'name' | 'value' | 'onBlur' | 'onChange'
+  'defaultValue' | 'error' | 'name' | 'ref' | 'value' | 'onBlur' | 'onChange'
 > &
   UseControllerProps<TFieldValues, TName>;
 

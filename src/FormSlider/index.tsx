@@ -12,7 +12,7 @@ export type FormSliderProps<
   TName extends FieldPath<TFieldValues>
 > = Omit<
   SliderProps,
-  'defaultValue' | 'name' | 'value' | 'onBlur' | 'onChange'
+  'defaultValue' | 'name' | 'ref' | 'value' | 'onBlur' | 'onChange'
 > &
   UseControllerProps<TFieldValues, TName>;
 

@@ -6,6 +6,7 @@ import type {
   FormEventHandler,
   KeyboardEventHandler,
 } from 'react';
+import { forwardRef } from 'react';
 
 export interface FormProps extends BoxProps<'form'> {
   /**
@@ -21,7 +22,7 @@ export interface FormProps extends BoxProps<'form'> {
 /**
  * @see [React Box component](https://mui.com/material-ui/react-box/)
  */
-const Form: FC<FormProps> = (props) => {
+const Form: FC<FormProps> = forwardRef((props, ref) => {
   const {
     component = 'form',
     onKeyDown,
@@ -47,11 +48,12 @@ const Form: FC<FormProps> = (props) => {
   return (
     <Box
       {...rest}
+      ref={ref}
       component={component}
       onKeyDown={handleKeyDown}
       onSubmit={handleSubmit}
     />
   );
-};
+});
 
 export default Form;

@@ -12,7 +12,7 @@ export type FormRatingProps<
   TName extends FieldPath<TFieldValues>
 > = Omit<
   RatingProps,
-  'defaultValue' | 'name' | 'value' | 'onBlur' | 'onChange'
+  'defaultValue' | 'name' | 'ref' | 'value' | 'onBlur' | 'onChange'
 > &
   UseControllerProps<TFieldValues, TName>;
 

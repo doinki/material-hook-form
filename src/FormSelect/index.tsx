@@ -12,7 +12,7 @@ export type FormSelectProps<
   TName extends FieldPath<TFieldValues>
 > = Omit<
   SelectProps,
-  'defaultValue' | 'name' | 'value' | 'onBlur' | 'onChange'
+  'defaultValue' | 'name' | 'ref' | 'value' | 'onBlur' | 'onChange'
 > &
   UseControllerProps<TFieldValues, TName>;
 
