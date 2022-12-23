@@ -19,6 +19,14 @@ export interface FormProps extends BoxProps<'form'> {
   disableEnterSubmit?: boolean;
 }
 
+const isEnabledSubmitButton = (target: EventTarget) => {
+  return (
+    target instanceof HTMLButtonElement &&
+    target.type === 'submit' &&
+    !target.disabled
+  );
+};
+
 /**
  * @see [React Box component](https://mui.com/material-ui/react-box/)
  */
@@ -32,7 +40,7 @@ const Form: FC<FormProps> = forwardRef((props, ref) => {
   } = props;
 
   const handleKeyDown: KeyboardEventHandler<HTMLFormElement> = (e) => {
-    if (disableEnterSubmit && e.key === 'Enter') {
+    if (e.key === 'Enter' && !isEnabledSubmitButton(e.target)) {
       e.preventDefault();
     }
 
@@ -50,7 +58,7 @@ const Form: FC<FormProps> = forwardRef((props, ref) => {
       {...rest}
       ref={ref}
       component={component}
-      onKeyDown={handleKeyDown}
+      onKeyDown={disableEnterSubmit ? handleKeyDown : onKeyDown}
       onSubmit={handleSubmit}
     />
   );
