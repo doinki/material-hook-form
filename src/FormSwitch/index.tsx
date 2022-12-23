@@ -7,21 +7,21 @@ import type {
 } from 'react-hook-form';
 import { useController } from 'react-hook-form';
 
-export type FormSwitchProps<
+export interface FormSwitchProps<
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues>
-> = Omit<
-  SwitchProps,
-  | 'checked'
-  | 'defaultChecked'
-  | 'defaultValue'
-  | 'name'
-  | 'ref'
-  | 'value'
-  | 'onBlur'
-  | 'onChange'
-> &
-  UseControllerProps<TFieldValues, TName>;
+> extends Omit<
+      SwitchProps,
+      | 'checked'
+      | 'defaultChecked'
+      | 'defaultValue'
+      | 'name'
+      | 'ref'
+      | 'value'
+      | 'onBlur'
+      | 'onChange'
+    >,
+    UseControllerProps<TFieldValues, TName> {}
 
 /**
  * @see [React Switch component](https://mui.com/material-ui/react-switch/)

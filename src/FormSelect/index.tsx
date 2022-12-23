@@ -7,14 +7,14 @@ import type {
 } from 'react-hook-form';
 import { useController } from 'react-hook-form';
 
-export type FormSelectProps<
+export interface FormSelectProps<
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues>
-> = Omit<
-  SelectProps,
-  'defaultValue' | 'name' | 'ref' | 'value' | 'onBlur' | 'onChange'
-> &
-  UseControllerProps<TFieldValues, TName>;
+> extends Omit<
+      SelectProps,
+      'defaultValue' | 'name' | 'ref' | 'value' | 'onBlur' | 'onChange'
+    >,
+    UseControllerProps<TFieldValues, TName> {}
 
 /**
  * @see [React Select component](https://mui.com/material-ui/react-select/)

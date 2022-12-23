@@ -7,14 +7,14 @@ import type {
 } from 'react-hook-form';
 import { useController } from 'react-hook-form';
 
-export type FormRatingProps<
+export interface FormRatingProps<
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues>
-> = Omit<
-  RatingProps,
-  'defaultValue' | 'name' | 'ref' | 'value' | 'onBlur' | 'onChange'
-> &
-  UseControllerProps<TFieldValues, TName>;
+> extends Omit<
+      RatingProps,
+      'defaultValue' | 'name' | 'ref' | 'value' | 'onBlur' | 'onChange'
+    >,
+    UseControllerProps<TFieldValues, TName> {}
 
 /**
  * @see [React Rating component](https://mui.com/material-ui/react-rating/)
@@ -29,7 +29,7 @@ const FormRating = <
     props;
 
   const {
-    field: { onChange: handleChange, ...field },
+    field: { onChange, ...field },
   } = useController({
     control,
     defaultValue,
@@ -38,15 +38,11 @@ const FormRating = <
     shouldUnregister,
   });
 
-  return (
-    <Rating
-      {...rest}
-      {...field}
-      onChange={(_, newValue) => {
-        handleChange(newValue);
-      }}
-    />
-  );
+  const handleChange: RatingProps['onChange'] = (_, newValue) => {
+    onChange(newValue);
+  };
+
+  return <Rating {...rest} {...field} onChange={handleChange} />;
 };
 
 export default FormRating;
