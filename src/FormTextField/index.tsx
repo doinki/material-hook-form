@@ -7,14 +7,20 @@ import type {
 } from 'react-hook-form';
 import { useController } from 'react-hook-form';
 
-export type FormTextFieldProps<
+export interface FormTextFieldProps<
   TFieldValues extends FieldValues,
   TName extends FieldPath<TFieldValues>
-> = Omit<
-  TextFieldProps,
-  'defaultValue' | 'error' | 'name' | 'ref' | 'value' | 'onBlur' | 'onChange'
-> &
-  UseControllerProps<TFieldValues, TName>;
+> extends Omit<
+      TextFieldProps,
+      | 'defaultValue'
+      | 'error'
+      | 'name'
+      | 'ref'
+      | 'value'
+      | 'onBlur'
+      | 'onChange'
+    >,
+    UseControllerProps<TFieldValues, TName> {}
 
 /**
  * @see [React Text Field component](https://mui.com/material-ui/react-text-field/)
@@ -41,10 +47,10 @@ const FormTextField = <
 
   return (
     <TextField
+      error={!!error}
       helperText={error?.message}
       {...rest}
       {...field}
-      error={!!error}
     />
   );
 };
