@@ -17,8 +17,9 @@ export interface FormToggleButtonGroupProps<
     UseControllerProps<TFieldValues, TName> {
   /**
    * @default false
+   * @see [Enforce value set](https://mui.com/material-ui/react-toggle-button/#enforce-value-set)
    */
-  disableNull?: boolean;
+  enforce?: boolean;
 }
 
 /**
@@ -33,7 +34,7 @@ const FormToggleButtonGroup = <
   const {
     control,
     defaultValue,
-    disableNull,
+    enforce,
     name,
     rules,
     shouldUnregister,
@@ -50,22 +51,18 @@ const FormToggleButtonGroup = <
     shouldUnregister,
   });
 
-  return (
-    <ToggleButtonGroup
-      {...rest}
-      {...field}
-      onChange={(_, newValue) => {
-        if (
-          disableNull &&
-          (Array.isArray(newValue) ? newValue.length === 0 : newValue === null)
-        ) {
-          return;
-        }
+  const handleChange: ToggleButtonGroupProps['onChange'] = (_, newValue) => {
+    if (
+      enforce &&
+      (Array.isArray(newValue) ? newValue.length === 0 : newValue === null)
+    ) {
+      return;
+    }
 
-        onChange(newValue);
-      }}
-    />
-  );
+    onChange(newValue);
+  };
+
+  return <ToggleButtonGroup {...rest} {...field} onChange={handleChange} />;
 };
 
 export default FormToggleButtonGroup;

@@ -72,7 +72,7 @@ EnforceValue1.args = {
     </ToggleButton>,
   ],
   defaultValue: 'left',
-  disableNull: true,
+  enforce: true,
   exclusive: true,
 };
 
@@ -93,5 +93,5 @@ EnforceValue2.args = {
     </ToggleButton>,
   ],
   defaultValue: ['left'],
-  disableNull: true,
+  enforce: true,
 };
