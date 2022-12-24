@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import FormRating from '../FormRating';
+import FormRating from '../src/FormRating';
 
 export default {
   component: FormRating,

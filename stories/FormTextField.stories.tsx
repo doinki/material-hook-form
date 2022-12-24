@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import FormTextField from '../FormTextField';
+import FormTextField from '../src/FormTextField';
 
 export default {
   component: FormTextField,

@@ -5,9 +5,8 @@ export const args = { name: 'storybook' };
 export const decorators = [
   (Story) => {
     const methods = useForm();
-    const { watch } = methods;
 
-    console.log(watch());
+    console.log(methods.watch());
 
     return (
       <FormProvider {...methods}>

@@ -1,7 +1,7 @@
 import MenuItem from '@mui/material/MenuItem';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import FormSelect from '../FormSelect';
+import FormSelect from '../src/FormSelect';
 
 export default {
   component: FormSelect,

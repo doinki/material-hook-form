@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import FormSlider from '../FormSlider';
+import FormSlider from '../src/FormSlider';
 
 export default {
   component: FormSlider,

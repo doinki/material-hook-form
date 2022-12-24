@@ -5,7 +5,7 @@ import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
 import ToggleButton from '@mui/material/ToggleButton';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import FormToggleButtonGroup from '../FormToggleButtonGroup';
+import FormToggleButtonGroup from '../src/FormToggleButtonGroup';
 
 export default {
   component: FormToggleButtonGroup,

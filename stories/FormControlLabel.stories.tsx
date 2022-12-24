@@ -2,7 +2,7 @@ import MuiCheckbox from '@mui/material/Checkbox';
 import MuiSwitch from '@mui/material/Switch';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import FormControlLabel from '../FormControlLabel';
+import FormControlLabel from '../src/FormControlLabel';
 
 export default {
   component: FormControlLabel,

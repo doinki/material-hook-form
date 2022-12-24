@@ -2,8 +2,8 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
-import Form from '../Form';
-import FormTextField from '../FormTextField';
+import Form from '../src/Form';
+import FormTextField from '../src/FormTextField';
 
 export default {
   component: Form,
