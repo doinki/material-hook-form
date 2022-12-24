@@ -33,9 +33,9 @@ const isEnabledSubmitButton = (target: EventTarget) => {
 const Form: FC<FormProps> = forwardRef((props, ref) => {
   const {
     component = 'form',
+    disableEnterSubmit = false,
     onKeyDown,
     onSubmit,
-    disableEnterSubmit = false,
     ...rest
   } = props;
 

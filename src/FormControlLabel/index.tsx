@@ -36,12 +36,12 @@ const FormControlLabel = <
   props: FormControlLabelProps<TFieldValues, TName>
 ) => {
   const {
+    children,
     control,
     defaultValue,
     name,
     rules,
     shouldUnregister,
-    children,
     ...rest
   } = props;
 
@@ -49,8 +49,8 @@ const FormControlLabel = <
     field: { value, ...field },
   } = useController({
     control,
-    name,
     defaultValue,
+    name,
     rules,
     shouldUnregister,
   });
