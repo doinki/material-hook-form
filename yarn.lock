@@ -2398,22 +2398,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rollup/plugin-terser@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "@rollup/plugin-terser@npm:0.2.1"
-  dependencies:
-    serialize-javascript: ^6.0.0
-    smob: ^0.0.6
-    terser: ^5.15.1
-  peerDependencies:
-    rollup: ^2.x || ^3.x
-  peerDependenciesMeta:
-    rollup:
-      optional: true
-  checksum: 86a5370d111455083907529eacf810e322032f20b756745ce8b0cbb70b0cbd564b7452dc835aa7ece6a9bbc9ac36de4781f7d2c2bb4786f4161100e19826b927
-  languageName: node
-  linkType: hard
-
 "@rollup/pluginutils@npm:^5.0.1":
   version: 5.0.2
   resolution: "@rollup/pluginutils@npm:5.0.2"
@@ -10134,7 +10118,6 @@ __metadata:
     "@mui/material": ^5.11.1
     "@rollup/plugin-babel": ^6.0.3
     "@rollup/plugin-node-resolve": ^15.0.1
-    "@rollup/plugin-terser": ^0.2.1
     "@storybook/addon-essentials": ^6.5.15
     "@storybook/addon-interactions": ^6.5.15
     "@storybook/addon-links": ^6.5.15
@@ -13103,13 +13086,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"smob@npm:^0.0.6":
-  version: 0.0.6
-  resolution: "smob@npm:0.0.6"
-  checksum: 360b8b72896974411ec6ca9a352b306bd4233aea44309dbebaeb41fc822cf770b094589e42a8a025ae291f043cbfc4199fc01dd909e45c7bd3c23d287c7e5bac
-  languageName: node
-  linkType: hard
-
 "snapdragon-node@npm:^2.0.1":
   version: 2.1.1
   resolution: "snapdragon-node@npm:2.1.1"
@@ -13768,7 +13744,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:^5.10.0, terser@npm:^5.14.1, terser@npm:^5.15.1, terser@npm:^5.3.4":
+"terser@npm:^5.10.0, terser@npm:^5.14.1, terser@npm:^5.3.4":
   version: 5.16.1
   resolution: "terser@npm:5.16.1"
   dependencies:
